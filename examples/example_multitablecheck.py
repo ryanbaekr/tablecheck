@@ -1,7 +1,11 @@
+import os
 from tablecheck import MultiTableCheck
 
+_DIR = os.path.dirname(os.path.realpath(__file__))
+_FILE = os.path.normpath(os.path.join(_DIR, "example.xlsx"))
+
 my_checker = MultiTableCheck(
-    "example.xlsx",
+    _FILE,
     [
         "Sheet1",
         "Sheet2",
